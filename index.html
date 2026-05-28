@@ -4,258 +4,170 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agro Forte | Futuro Sustentável</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    :root {
-      --verde-escuro: #1a472a;
-      --verde-principal: #2e7d32;
-      --verde-claro: #4caf50;
-      --bege: #f5f0e6;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    header {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    nav {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--verde-escuro);
-    }
-    .menu a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .menu a:hover { color: var(--verde-principal); }
-
-    .banner {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/random/1920x1080/?drone,agriculture') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-    .banner-content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: var(--verde-principal);
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      margin-top: 2rem;
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-    .btn:hover {
-      background: var(--verde-claro);
-      transform: translateY(-3px);
-    }
-
-    section {
-      padding: 100px 5%;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    h2 {
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--verde-escuro);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .calculadora, .quiz, .galeria {
-      background: #f8f9f8;
-      border-radius: 20px;
-      padding: 3rem;
-      margin: 3rem 0;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    footer {
-      background: var(--verde-escuro);
-      color: white;
-      text-align: center;
-      padding: 3rem 5%;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
-    <nav>
-      <div class="logo">🌱 Agro Forte</div>
-      <div class="menu">
-        <a href="#producao">Produção</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
-        <a href="#desafios">Desafios</a>
-        <a href="#solucoes">Soluções</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
+    <h1>🌱 Agro Forte</h1>
+    <p>Futuro Sustentável</p>
   </header>
 
-  <!-- BANNER -->
-  <section class="banner">
-    <div class="banner-content">
-      <h1>Agro Forte,<br>Futuro Sustentável</h1>
-      <p style="font-size:1.4rem; max-width:700px;">Equilíbrio entre alta produtividade e preservação ambiental</p>
-      <a href="#producao" class="btn">Explorar o Site</a>
-    </div>
+  <nav>
+    <a href="#home">Início</a>
+    <a href="#producao">Produção</a>
+    <a href="#sustentabilidade">Sustentabilidade</a>
+    <a href="#desafios">Desafios</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#dados">Dados</a>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="home">
+    <h1>Agro Forte, Futuro Sustentável</h1>
+    <p>Equilíbrio entre alta produtividade e preservação ambiental no agronegócio brasileiro.</p>
+    <a href="#producao">Explorar o Site</a>
   </section>
 
-  <!-- PRODUÇÃO AGRÍCOLA -->
   <section id="producao">
-    <h2>Produção Agrícola</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>24,4%</h3>
-        <p>Participação no PIB brasileiro (2024/25)</p>
-      </div>
-      <div class="card">
-        <h3>28 milhões</h3>
-        <p>Pessoas empregadas na cadeia agro</p>
-      </div>
-      <div class="card">
-        <h3>1º lugar</h3>
-        <p>Maior exportador mundial de soja, café, carne, açúcar e milho</p>
-      </div>
-    </div>
+    <h2>Importância do Agronegócio para o Brasil</h2>
+    <ul>
+      <li>Participação no PIB: 24,4% em 2025 (Embrapa)</li>
+      <li>Geração de empregos: mais de 28 milhões de pessoas na cadeia produtiva</li>
+      <li>Exportações: US$ 160 bilhões em 2024</li>
+      <li>Principais produtos: Soja, Milho, Carne Bovina, Café, Açúcar e Algodão</li>
+      <li>O Brasil alimenta cerca de 1 bilhão de pessoas no mundo</li>
+    </ul>
   </section>
 
-  <!-- SUSTENTABILIDADE -->
-  <section id="sustentabilidade" style="background:#f8f9f8;">
+  <section id="sustentabilidade">
     <h2>Sustentabilidade no Campo</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-leaf fa-3x" style="color:var(--verde-principal);"></i>
-        <h3>Plantio Direto</h3>
-        <p>Reduz erosão e sequestra carbono</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-solar-panel fa-3x" style="color:var(--verde-principal);"></i>
-        <h3>Energia Renovável</h3>
-        <p>Solar, biogás e biodigestores</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-droplet fa-3x" style="color:var(--verde-principal);"></i>
-        <h3>Irrigação Inteligente</h3>
-        <p>Economia de até 60% de água</p>
-      </div>
-    </div>
+    <ul>
+      <li>Plantio Direto em mais de 40 milhões de hectares</li>
+      <li>Integração Lavoura-Pecuária-Floresta (ILPF)</li>
+      <li>Uso de bioinsumos e controle biológico</li>
+      <li>Energia renovável: solar, biogás e biodigestores</li>
+      <li>Agricultura de Precisão com drones e sensores</li>
+    </ul>
   </section>
 
-  <!-- CALCULADORA DE IMPACTO -->
-  <section class="calculadora">
+  <section id="desafios">
+    <h2>Desafios Ambientais</h2>
+    <ul>
+      <li>Desmatamento ilegal na Amazônia e Cerrado</li>
+      <li>Consumo de água: agricultura usa cerca de 70% da água doce</li>
+      <li>Emissões: pecuária contribui com metano</li>
+      <li>Uso de agrotóxicos e contaminação de rios</li>
+      <li>Perda de biodiversidade</li>
+    </ul>
+  </section>
+
+  <section id="dados">
+    <h2>Dados e Estatísticas</h2>
+    <table border="1">
+      <tr>
+        <th>Indicador</th>
+        <th>Valor</th>
+      </tr>
+      <tr>
+        <td>Área plantada de soja</td>
+        <td>45 milhões de hectares</td>
+      </tr>
+      <tr>
+        <td>Produção de grãos 2024/25</td>
+        <td>340 milhões de toneladas</td>
+      </tr>
+      <tr>
+        <td>Redução de desmatamento legal</td>
+        <td>Meta Plano ABC+</td>
+      </tr>
+      <tr>
+        <td>Áreas de Preservação Permanente</td>
+        <td>Obrigatórias pelo Código Florestal</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="solucoes">
+    <h2>Soluções e Tecnologias</h2>
+    <ul>
+      <li>Drones para monitoramento e pulverização precisa</li>
+      <li>Inteligência Artificial e Big Data</li>
+      <li>Recuperação de pastagens degradadas</li>
+      <li>Fixação biológica de nitrogênio</li>
+      <li>Certificações sustentáveis (Rainforest, Roundtable)</li>
+    </ul>
+    <p>O Plano ABC+ busca reduzir emissões em 1,1 bilhão de toneladas de CO₂ até 2030.</p>
+  </section>
+
+  <!-- CALCULADORA -->
+  <section id="calculadora">
     <h2>Calculadora de Impacto Ambiental</h2>
-    <div style="max-width:600px; margin:0 auto;">
-      <label>Área cultivada (hectares):</label><br>
-      <input type="number" id="area" value="100" style="width:100%; padding:12px; margin:10px 0;"><br>
+    
+    <label>Área cultivada (hectares):</label><br>
+    <input type="number" id="area" value="100"><br><br>
 
-      <label>Tipo de Cultura:</label><br>
-      <select id="cultura" style="width:100%; padding:12px; margin:10px 0;">
-        <option value="1.8">Soja</option>
-        <option value="2.4">Milho</option>
-        <option value="3.5">Café</option>
-        <option value="4.2">Pecuária</option>
-      </select><br>
+    <label>Tipo de Cultura:</label><br>
+    <select id="cultura">
+      <option value="1.8">Soja</option>
+      <option value="2.4">Milho</option>
+      <option value="3.5">Café</option>
+      <option value="4.2">Pecuária</option>
+    </select><br><br>
 
-      <label>Prática:</label><br>
-      <select id="pratica" style="width:100%; padding:12px; margin:10px 0;">
-        <option value="1">Convencional</option>
-        <option value="0.65">Plantio Direto</option>
-        <option value="0.45">Regenerativa / ILPF</option>
-      </select><br>
+    <label>Prática Utilizada:</label><br>
+    <select id="pratica">
+      <option value="1">Convencional</option>
+      <option value="0.65">Plantio Direto</option>
+      <option value="0.45">Regenerativa (ILPF)</option>
+    </select><br><br>
 
-      <button onclick="calcularImpacto()" style="width:100%; padding:16px; background:var(--verde-principal); color:white; border:none; border-radius:12px; font-size:1.1rem;">Calcular Impacto</button>
+    <button onclick="calcularImpacto()">Calcular Impacto</button>
 
-      <div id="resultado-calc" style="margin-top:20px; font-size:1.1rem;"></div>
-    </div>
+    <div id="resultado"></div>
   </section>
 
-  <!-- QUIZ -->
-  <section id="quiz" class="quiz">
-    <h2>Quiz: Quão sustentável é seu conhecimento?</h2>
+  <!-- QUIZ INTERATIVO -->
+  <section id="quiz">
+    <h2>Quiz: Sustentabilidade no Agro</h2>
+    
     <div id="pergunta-container">
       <h3 id="pergunta"></h3>
       <div id="opcoes"></div>
     </div>
+    
     <div id="resultado-quiz" style="display:none;"></div>
   </section>
 
-  <!-- SOLUÇÕES E FUTURO -->
-  <section id="solucoes">
-    <h2>Soluções e Futuro</h2>
-    <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto;">
-      O Brasil tem potencial para ser o primeiro grande produtor mundial de alimentos com <strong>baixa emissão de carbono</strong>.
-    </p>
+  <!-- GALERIA SIMPLES -->
+  <section id="galeria">
+    <h2>Galeria de Boas Práticas</h2>
+    <img src="https://source.unsplash.com/random/600x400/?drone,agriculture" alt="Drone" width="300">
+    <img src="https://source.unsplash.com/random/600x400/?solar,farm" alt="Energia Solar" width="300">
+    <img src="https://source.unsplash.com/random/600x400/?plantation,field" alt="Plantio Direto" width="300">
+    <img src="https://source.unsplash.com/random/600x400/?cattle,integration" alt="ILPF" width="300">
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p><strong>Agro Forte – Futuro Sustentável © 2026</strong></p>
+    <p>Agro Forte – Futuro Sustentável © 2026</p>
     <p>Fontes: Embrapa, IBGE, CNA, MAPA</p>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     // Calculadora
     function calcularImpacto() {
-      const area = parseFloat(document.getElementById('area').value);
+      const area = parseFloat(document.getElementById('area').value) || 0;
       const cultura = parseFloat(document.getElementById('cultura').value);
       const pratica = parseFloat(document.getElementById('pratica').value);
 
       const emissao = (area * cultura * pratica).toFixed(1);
-      const agua = (area * 4500 * pratica).toFixed(0);
+      const agua = Math.round(area * 4500 * pratica);
 
-      document.getElementById('resultado-calc').innerHTML = `
-        <h3 style="color:var(--verde-principal);">Resultado Estimado</h3>
-        <p><strong>Emissões de CO₂e:</strong> ${emissao} toneladas/ano</p>
-        <p><strong>Consumo de Água:</strong> ${agua} mil litros/ano</p>
-        <p style="color:#2e7d32; font-weight:600;">✅ Práticas sustentáveis podem reduzir até 55% desse impacto!</p>
+      document.getElementById('resultado').innerHTML = `
+        <p><strong>Resultado Estimado:</strong></p>
+        <p>Emissões de CO₂e: ${emissao} toneladas/ano</p>
+        <p>Consumo de Água: ${agua.toLocaleString('pt-BR')} mil litros/ano</p>
+        <p>✅ Com práticas sustentáveis você pode reduzir até 55% do impacto!</p>
       `;
     }
 
@@ -263,17 +175,17 @@
     const quiz = [
       {
         pergunta: "Qual prática mais contribui para a saúde do solo?",
-        opcoes: ["Monocultura intensiva", "Rotação de culturas e cobertura vegetal", "Uso constante de agrotóxicos"],
+        opcoes: ["Monocultura", "Rotação de culturas", "Uso intenso de agrotóxicos"],
         correta: 1
       },
       {
-        pergunta: "O que significa Agricultura de Precisão?",
-        opcoes: ["Usar mais máquinas", "Aplicar insumos no momento e lugar exato", "Plantar apenas soja"],
-        correta: 1
+        pergunta: "O que significa ILPF?",
+        opcoes: ["Integração Lavoura Pecuária Floresta", "Irrigação Localizada", "Insumos de Alta Produtividade"],
+        correta: 0
       },
       {
-        pergunta: "Qual é a principal vantagem do Plantio Direto?",
-        opcoes: ["Aumentar erosão", "Reduzir perda de solo e sequestrar carbono", "Gastar mais combustível"],
+        pergunta: "Qual é uma vantagem do Plantio Direto?",
+        opcoes: ["Aumenta erosão", "Sequestra carbono", "Exige mais combustível"],
         correta: 1
       }
     ];
@@ -290,14 +202,15 @@
       p.opcoes.forEach((opcao, index) => {
         const btn = document.createElement('button');
         btn.textContent = opcao;
-        btn.style.cssText = "display:block; width:100%; padding:12px; margin:8px 0; border:1px solid #ddd; border-radius:8px; background:white;";
         btn.onclick = () => verificarResposta(index);
         opcoesDiv.appendChild(btn);
+        opcoesDiv.appendChild(document.createElement('br'));
       });
     }
 
     function verificarResposta(resposta) {
       if (resposta === quiz[perguntaAtual].correta) acertos++;
+      
       perguntaAtual++;
       if (perguntaAtual < quiz.length) {
         carregarPergunta();
@@ -309,18 +222,20 @@
     function mostrarResultado() {
       const percent = Math.round((acertos / quiz.length) * 100);
       document.getElementById('pergunta-container').style.display = 'none';
-      document.getElementById('resultado-quiz').style.display = 'block';
-      document.getElementById('resultado-quiz').innerHTML = `
+      const res = document.getElementById('resultado-quiz');
+      res.style.display = 'block';
+      res.innerHTML = `
         <h3>Você acertou ${acertos} de ${quiz.length} (${percent}%)</h3>
-        <p>${percent >= 80 ? '🌱 Parabéns! Você domina o tema.' : '💡 Continue aprendendo sobre sustentabilidade no agro!'}</p>
-        <button onclick="location.reload()" style="padding:12px 30px; background:var(--verde-principal); color:white; border:none; border-radius:50px;">Refazer Quiz</button>
+        <p>${percent >= 70 ? '🌱 Parabéns! Você entende bem de sustentabilidade.' : '💡 Continue aprendendo sobre o agro sustentável!'}</p>
+        <button onclick="location.reload()">Refazer Quiz</button>
       `;
     }
 
-    // Iniciar Quiz
-    window.onload = () => {
+    // Iniciar quiz automaticamente
+    window.onload = function() {
       carregarPergunta();
     };
   </script>
+
 </body>
 </html>
