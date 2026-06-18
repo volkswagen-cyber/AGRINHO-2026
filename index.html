@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agro Forte | Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -65,26 +66,11 @@
   <section id="dados">
     <h2>Dados e Estatísticas</h2>
     <table border="1">
-      <tr>
-        <th>Indicador</th>
-        <th>Valor</th>
-      </tr>
-      <tr>
-        <td>Área plantada de soja</td>
-        <td>45 milhões de hectares</td>
-      </tr>
-      <tr>
-        <td>Produção de grãos 2024/25</td>
-        <td>340 milhões de toneladas</td>
-      </tr>
-      <tr>
-        <td>Redução de desmatamento legal</td>
-        <td>Meta Plano ABC+</td>
-      </tr>
-      <tr>
-        <td>Áreas de Preservação Permanente</td>
-        <td>Obrigatórias pelo Código Florestal</td>
-      </tr>
+      <tr><th>Indicador</th><th>Valor</th></tr>
+      <tr><td>Área plantada de soja</td><td>45 milhões de hectares</td></tr>
+      <tr><td>Produção de grãos 2024/25</td><td>340 milhões de toneladas</td></tr>
+      <tr><td>Redução de desmatamento legal</td><td>Meta Plano ABC+</td></tr>
+      <tr><td>Áreas de Preservação Permanente</td><td>Obrigatórias pelo Código Florestal</td></tr>
     </table>
   </section>
 
@@ -100,10 +86,8 @@
     <p>O Plano ABC+ busca reduzir emissões em 1,1 bilhão de toneladas de CO₂ até 2030.</p>
   </section>
 
-  <!-- CALCULADORA -->
   <section id="calculadora">
     <h2>Calculadora de Impacto Ambiental</h2>
-    
     <label>Área cultivada (hectares):</label><br>
     <input type="number" id="area" value="100"><br><br>
 
@@ -123,23 +107,18 @@
     </select><br><br>
 
     <button onclick="calcularImpacto()">Calcular Impacto</button>
-
     <div id="resultado"></div>
   </section>
 
-  <!-- QUIZ INTERATIVO -->
   <section id="quiz">
     <h2>Quiz: Sustentabilidade no Agro</h2>
-    
     <div id="pergunta-container">
       <h3 id="pergunta"></h3>
       <div id="opcoes"></div>
     </div>
-    
     <div id="resultado-quiz" style="display:none;"></div>
   </section>
 
-  <!-- GALERIA SIMPLES -->
   <section id="galeria">
     <h2>Galeria de Boas Práticas</h2>
     <img src="https://source.unsplash.com/random/600x400/?drone,agriculture" alt="Drone" width="300">
@@ -153,89 +132,6 @@
     <p>Fontes: Embrapa, IBGE, CNA, MAPA</p>
   </footer>
 
-  <script>
-    // Calculadora
-    function calcularImpacto() {
-      const area = parseFloat(document.getElementById('area').value) || 0;
-      const cultura = parseFloat(document.getElementById('cultura').value);
-      const pratica = parseFloat(document.getElementById('pratica').value);
-
-      const emissao = (area * cultura * pratica).toFixed(1);
-      const agua = Math.round(area * 4500 * pratica);
-
-      document.getElementById('resultado').innerHTML = `
-        <p><strong>Resultado Estimado:</strong></p>
-        <p>Emissões de CO₂e: ${emissao} toneladas/ano</p>
-        <p>Consumo de Água: ${agua.toLocaleString('pt-BR')} mil litros/ano</p>
-        <p>✅ Com práticas sustentáveis você pode reduzir até 55% do impacto!</p>
-      `;
-    }
-
-    // Quiz
-    const quiz = [
-      {
-        pergunta: "Qual prática mais contribui para a saúde do solo?",
-        opcoes: ["Monocultura", "Rotação de culturas", "Uso intenso de agrotóxicos"],
-        correta: 1
-      },
-      {
-        pergunta: "O que significa ILPF?",
-        opcoes: ["Integração Lavoura Pecuária Floresta", "Irrigação Localizada", "Insumos de Alta Produtividade"],
-        correta: 0
-      },
-      {
-        pergunta: "Qual é uma vantagem do Plantio Direto?",
-        opcoes: ["Aumenta erosão", "Sequestra carbono", "Exige mais combustível"],
-        correta: 1
-      }
-    ];
-
-    let perguntaAtual = 0;
-    let acertos = 0;
-
-    function carregarPergunta() {
-      const p = quiz[perguntaAtual];
-      document.getElementById('pergunta').textContent = p.pergunta;
-      const opcoesDiv = document.getElementById('opcoes');
-      opcoesDiv.innerHTML = '';
-
-      p.opcoes.forEach((opcao, index) => {
-        const btn = document.createElement('button');
-        btn.textContent = opcao;
-        btn.onclick = () => verificarResposta(index);
-        opcoesDiv.appendChild(btn);
-        opcoesDiv.appendChild(document.createElement('br'));
-      });
-    }
-
-    function verificarResposta(resposta) {
-      if (resposta === quiz[perguntaAtual].correta) acertos++;
-      
-      perguntaAtual++;
-      if (perguntaAtual < quiz.length) {
-        carregarPergunta();
-      } else {
-        mostrarResultado();
-      }
-    }
-
-    function mostrarResultado() {
-      const percent = Math.round((acertos / quiz.length) * 100);
-      document.getElementById('pergunta-container').style.display = 'none';
-      const res = document.getElementById('resultado-quiz');
-      res.style.display = 'block';
-      res.innerHTML = `
-        <h3>Você acertou ${acertos} de ${quiz.length} (${percent}%)</h3>
-        <p>${percent >= 70 ? '🌱 Parabéns! Você entende bem de sustentabilidade.' : '💡 Continue aprendendo sobre o agro sustentável!'}</p>
-        <button onclick="location.reload()">Refazer Quiz</button>
-      `;
-    }
-
-    // Iniciar quiz automaticamente
-    window.onload = function() {
-      carregarPergunta();
-    };
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
